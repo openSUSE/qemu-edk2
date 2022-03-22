@@ -40,6 +40,10 @@ static unsigned g_STAT_OFFSET = 0;
 
 #define REP_LEN_COUNT 64
 
+#if __GNUC__ >= 12
+#  pragma GCC diagnostic ignored "-Wdangling-pointer"
+#endif
+
 void LzmaEncProps_Init(CLzmaEncProps *p)
 {
   p->level = 5;

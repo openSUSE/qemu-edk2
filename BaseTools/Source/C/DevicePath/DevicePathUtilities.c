@@ -16,6 +16,10 @@
 #include "UefiDevicePathLib.h"
 #include <Protocol/DevicePathUtilities.h>
 
+#if __GNUC__ >= 12
+#  pragma GCC diagnostic ignored "-Wstringop-overflow"
+#endif
+
 //
 // Template for an end-of-device path node.
 //
