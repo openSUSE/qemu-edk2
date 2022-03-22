@@ -37,6 +37,10 @@ SPDX-License-Identifier: BSD-2-Clause-Patent
 #define UTILITY_MAJOR_VERSION   0
 #define UTILITY_MINOR_VERSION   1
 
+#if __GNUC__ >= 12
+#  pragma GCC diagnostic ignored "-Wuse-after-free"
+#endif
+
 STATIC CHAR8      *mSectionTypeName[] = {
   NULL,                                 // 0x00 - reserved
   "EFI_SECTION_COMPRESSION",            // 0x01

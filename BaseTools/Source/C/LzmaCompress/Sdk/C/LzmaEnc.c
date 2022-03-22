@@ -38,6 +38,10 @@ static unsigned g_STAT_OFFSET = 0;
 #define kNumBitPriceShiftBits 4
 #define kBitPrice (1 << kNumBitPriceShiftBits)
 
+#if __GNUC__ >= 12
+#  pragma GCC diagnostic ignored "-Wdangling-pointer"
+#endif
+
 void LzmaEncProps_Init(CLzmaEncProps *p)
 {
   p->level = 5;
