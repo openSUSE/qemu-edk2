@@ -15,5 +15,5 @@
 	url = https://github.com/google/brotli
 [submodule "BaseTools/Source/C/BrotliCompress/brotli"]
 	path = BaseTools/Source/C/BrotliCompress/brotli
-	url = https://github.com/google/brotli
+	url = https://gitlab.suse.de/virtualization/qemu-edk2-brotlicompress-brotli.git
 	ignore = untracked
